@@ -1,1 +1,1 @@
-web: python tweeter.py
+web: python tweet.py
