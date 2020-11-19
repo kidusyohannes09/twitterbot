@@ -1,7 +1,7 @@
 import tweepy
 from search import get_tweet
 from mykey import CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
-
+from os import environ
 '''
 About: This function compiles the a tweet containing the bias and accuracy of a source that was
        Tweeted in a popular tweet. It then posts the tweet to the TrueNews twitter account.
