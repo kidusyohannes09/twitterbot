@@ -1,5 +1,6 @@
 import tweepy
 from search import get_tweet
+from time import sleep
 from mykey import CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
 
 '''
@@ -17,6 +18,6 @@ def tweet():
     api = tweepy.API(auth)
 
     api.update_status(tweet_contents)
-
+sleep(20)
 
 tweet()
