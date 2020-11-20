@@ -1,5 +1,5 @@
 import tweepy
-
+from time import sleep
 from database import connect, source_bias, source_accuracy, source_name
 from mykey import CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
 
@@ -20,7 +20,7 @@ def search_tweets():
     search_term = 'Election AND (Trump OR Biden OR Harris OR Pence)'
 
     tweets = tweepy.Cursor(api.search, count=100, q=search_term, result_type='mixed').items()
-
+    sleep(20)
     return tweets
 
 
@@ -37,7 +37,7 @@ def past_tweets():
     for tweet in tweets:
         links.append(tweet._json['entities']['urls'][0]['expanded_url'])
     return links
-
+sleep(20)
 
 def get_tweet():
     tweets = search_tweets()
@@ -57,3 +57,4 @@ def get_tweet():
             # Checks if Bias is valid
             if len(bias) > 0:
                 return [source_name(df, url), bias, accuracy, url, tweet]
+sleep(20)
