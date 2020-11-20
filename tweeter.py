@@ -2,7 +2,7 @@
 # source ./venv/bin/activate
 import tweepy
 from mykey import CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
-
+from time import sleep
 # Authenticate to Twitter
 
 auth = tweepy.OAuthHandler(CONSUMER_KEY,CONSUMER_SECRET)
@@ -31,7 +31,7 @@ search2 = "election lang:en"
 search3 = "from:realDonaldTrump"
 numberOfTweets = 30
 get_tweet_success = False
-
+sleep(20)
 # if not get_tweet_success:
 #     for tweet in tweepy.Cursor(api.search,q=search2, tweet_mode='extended',result_type='popular').items(numberOfTweets):
 
@@ -56,7 +56,7 @@ if not get_tweet_success:
     print(count)
 
     print('url: ', url)
-
+    sleep(20)
     import re
     
     print(re.search(r"//(.*?)/",url).group(1))
