@@ -59,6 +59,4 @@ if not get_tweet_success:
 
     import re
     
-    sleep(10)
-
     print(re.search(r"//(.*?)/",url).group(1))
