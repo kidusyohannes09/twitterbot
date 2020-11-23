@@ -1,3 +1,4 @@
+pipenv –python 3.8
 appdirs==1.4.3
 logging==0.4.9.6
 oauthlib==2.0.2
